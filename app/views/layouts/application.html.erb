@@ -9,7 +9,7 @@
   </head>
 
   <body>
-   <nav class="navbar navbar-default  navbar-fixed-top">
+   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -17,18 +17,26 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Blog-H@gm</a>
+        <%= link_to "Blog-H@gm", posts_path, class:"navbar-brand" %>
       </div>
       
       <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav navbar-right">
-         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrase</a></li>
-         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
+        <li>
+          <%= link_to '<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registrarse'.html_safe, new_user_registration_path %>  
+        </li>
+        
+         <li>
+           <a href="#"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a>
+         </li>
        </ul>	
       </div>
     </div>
-   </nav>
+   </nav> 
 
+
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
