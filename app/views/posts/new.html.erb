@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+	  <h1>Nuevo Post</h1> 
+	  <%= form_for @post do |p|%>
+	    <div class="form-group">
+          <%= p.label :title, "Título" %>
+	      <%= p.text_field :title, class:"form-control input-lg", autofocus: true%>
+	    </div>
+	  <% end %>
+	</div>
+  </div>
+</div>
