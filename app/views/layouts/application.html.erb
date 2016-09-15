@@ -22,13 +22,24 @@
       
       <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to '<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registrarse'.html_safe, new_user_registration_path %>  
-        </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to '<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Salir'.html_safe, destroy_user_session_path, method: :delete %>
+          </li>
+
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-plus"></span> Nuevo Post</a>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to '<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registrarse'.html_safe, new_user_registration_path %>  
+          </li>
+          
+           <li>
+             <%= link_to '<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Ingresar'.html_safe,new_user_session_path %>
+           </li>
+        <% end %>
         
-         <li>
-           <%= link_to '<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Ingresar'.html_safe,new_user_session_path %>
-         </li>
        </ul>	
       </div>
     </div>
