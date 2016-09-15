@@ -28,7 +28,7 @@
           </li>
 
           <li>
-            <a href="#"><span class="glyphicon glyphicon-plus"></span> Nuevo Post</a>
+            <%= link_to '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo Post'.html_safe, new_post_path %>
           </li>
         <% else %>
           <li>
