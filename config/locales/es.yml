@@ -1,7 +1,6 @@
 es:
-
-  activerecord:
-    attributes:
-      post:
-        title: "Título"
-        body: "Cuerpo"
+    activerecord:
+      attributes:
+        post:
+          title: "Título"
+          body: "Cuerpo"
