@@ -14,7 +14,7 @@ class PostsController < ApplicationController
       if @post.save 
       	 redirect_to posts_path
       else
-         render :index
+         render :new
       end
     end
 
