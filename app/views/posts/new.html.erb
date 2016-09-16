@@ -2,6 +2,15 @@
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
 	  <h1>Nuevo Post</h1> 
+	  <% if @post.errors.any? %>
+	   <div class="alert alert-danger">
+	     <ul>
+	       <% @post.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	       <% end %>
+	     </ul>
+	   </div>
+	  <% end %>
 	  <%= form_for @post do |p|%>
 
 	    <div class="form-group">
