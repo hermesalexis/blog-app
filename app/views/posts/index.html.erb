@@ -1,16 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2 box">
+    <div class="col-sm-8 col-sm-offset-2">
      <% @posts.each do |post| %>
        <article>
-      	 <header><h2><%= post.title %></h2></header>
-      	 <footer>
-      	   <small id="post-date">
-      	     <%= "Publicado por #{post.user.email} hace al #{time_ago_in_words(post.created_at)}" %>
-      	   </small>
-      	 </footer>
+      	 <header><h2><%= link_to post.title, post %></h2></header>
+      	 <small id="post-date">
+      	   <%= "Publicado por #{post.user.email} hace al #{time_ago_in_words(post.created_at)}" %>
+      	 </small>
          <div class="lead body-post">
-           <%= "#{post.body.first(255)} ..." %>
+           <%= markdown(post.body.first(255)) %>
          </div>
        </article>
      <% end %>
