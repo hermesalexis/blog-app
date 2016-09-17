@@ -33,6 +33,10 @@ gem 'devise'
 gem 'rails-i18n', '~> 5.0.0' # For 5.0.x
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# gems for markdown
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+#gems for code markdown
+gem 'coderay', '~> 1.1', '>= 1.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
