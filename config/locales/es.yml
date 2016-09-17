@@ -4,3 +4,8 @@ es:
         post:
           title: "Título"
           body: "Cuerpo"
+
+    devise:
+      sessions:
+        signed_out: "Has cerrado tu sesión del blog"
+        signed_in: "Escribe ahora mismo Tú nuevo Post"

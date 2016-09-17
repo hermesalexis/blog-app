@@ -45,9 +45,12 @@
     </div>
    </nav> 
 
-
+   
    <!--<p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>-->
-    <%= yield %>
+  <% if flash[:notice] %>
+    <div class="alert alert-info"><a href="#" class="close" data-dismiss="alert" arial-label="close">x</a><%= flash[:notice] %></div>
+  <% end %>
+  <%= yield %>
   </body>
 </html>
