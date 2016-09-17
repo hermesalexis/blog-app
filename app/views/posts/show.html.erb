@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+  	<div class="col-sm-8 col-sm-offset-2">
+     <article class="lead">
+      <header><h1 class="text-center"><%= @post.title %> </h1></header>
+      <div class="lead body-post">
+      	<%= markdown(@post.body)%>
+      </div>
+     </article>
+  	</div>
+  </div>
+</div>
