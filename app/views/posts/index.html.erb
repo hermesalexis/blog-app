@@ -1,7 +1,20 @@
 <div class="container">
- <% if user_signed_in? %>
-  <h1><%= current_user.email %></h1>	
- <% else %>
-   <h1>Hola Mundo</h1>
- <% end %>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 box">
+     <% @posts.each do |post| %>
+       <article>
+      	 <header><h2><%= post.title %></h2></header>
+      	 <footer>
+      	   <small id="post-date">
+      	     <%= "Publicado por #{post.user.email} hace al #{time_ago_in_words(post.created_at)}" %>
+      	   </small>
+      	 </footer>
+         <div class="lead body-post">
+           <%= "#{post.body.first(255)} ..." %>
+         </div>
+       </article>
+     <% end %>
+      
+    </div>
+  </div>
 </div>

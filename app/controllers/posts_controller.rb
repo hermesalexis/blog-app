@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	
 	def index
-		
+	  @posts = Post.order('created_at DESC') #trae todos los posts ordenados por fecha descendente
 	end
 
 	def new
