@@ -9,7 +9,7 @@
   </head>
 
   <body>
-   <nav class="navbar navbar-inverse" id="bar-menu">
+   <nav class="navbar navbar-default bar-menu">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -50,19 +50,19 @@
          <div class="col-sm-12 jumbotron" id="hero">
              <div class="text-center">
                  <h1>Leer para Salir de la Tierra</h1>
-                 <p>Si Tú Tuvieras la oportunidad de teletransportate lejos de la tierra, hacia
+                 <p>Si Tuvieras la oportunidad de teletransportate lejos de la tierra, hacia
                  un sitio remoto, seguramente Tú imaginación sería Tú principal Motor</p>
              </div>
          </div>
      </div>
         
    </div>
-   
    <!--<p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>-->
   <% if flash[:notice] %>
     <div class="alert alert-info"><a href="#" class="close" data-dismiss="alert" arial-label="close">x</a><%= flash[:notice] %></div>
   <% end %>
   <%= yield %>
+  <%= render "layouts/footer"  %>
   </body>
 </html>
