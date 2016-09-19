@@ -5,7 +5,7 @@
        <article>
       	 <header><h2><%= link_to post.title, post %></h2></header>
       	 <small id="post-date">
-      	   <%= "Publicado por #{post.user.email}"%>
+      	   <%= "Publicado por #{post.user.email} hace "%>
            <%= "#{time_ago_in_words(post.created_at)}" %>
       	 </small>
          <div class="lead body-post">
