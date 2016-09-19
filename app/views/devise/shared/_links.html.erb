@@ -6,7 +6,7 @@
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <div class="pull-right">
+  <div class="pull-left">
     <%= link_to "Registrarse", new_registration_path(resource_name) %>	
   </div>
   
