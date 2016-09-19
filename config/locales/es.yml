@@ -9,3 +9,4 @@ es:
       sessions:
         signed_out: "Has cerrado tu sesión del blog"
         signed_in: "Escribe ahora mismo Tú nuevo Post"
+        signed_up: "Te has registrado correctamente"
